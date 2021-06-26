@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Página Perfil">
+  <meta name="author" content="PWALPHA">
+  <meta name="theme-color" content="#2F3BA2" />
+  <title>Press&Play - Perfil</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json" crossOrigin="use-credentials">
+  <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column vh-100">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-primary topbar static-top shadow">
+
+          <button class="btn btn-link mr-5" onClick="history.go(-1)">
+            <i class="fa fa-arrow-left "></i>
+          </button>
+          <img class="icon-header ml-5 pl-3" src="img/logo-icon.png">
+          <h3 class="font-weight-bolder">Perfil</h3>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-lg"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter"></span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Notificações
+                </h6>
+                <div class="notificacoesWindow" id="notification">
+
+          </div>
+          <span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+              data-target="#deleteALModal">
+          <a class="dropdown-item text-center text-danger small" id="mostra" >Apagar todas as notificações!</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid pt-2">
+
+
+          <div class="row">
+            <div id="profilePic" class="col-4 pl-3">
+              <img class="img-profile-bg rounded-circle" id="Pic" src="">
+            </div>
+            <div class="col-auto text-primary" style="margin-top: 65px; margin-left: -20px;">
+              <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-plus"></i>
+            </label>
+            <input id="file-upload" type="file" accept="image/*"/>
+            </div>
+            <div class="col-8" id="name">
+
+            </div>
+            <div class="w-100"></div>
+            <div class="row w-100 mt-4">
+              <div class="col ml-5">
+                <div class="tb-perfil">
+                  <div class="tb-name">
+                    <div class="progress progress-sm mb-2" id="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div id="level">
+
+                  </div>
+                </div>
+              </div class="d-inline">
+              <div class="col text-primary d-inline">
+                <div class="text-center">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="w-100 mx-4 mt-5">
+              <div class="tb-name">
+                <h4 class="text-secondary">Informações Pessoais</h4>
+              </div>
+              <div class="tb-edit" id="edit">
+                <button id="willEdit" class="bg-transparent text-secondary d-inline" data-toggle="modal" data-target="#perfilModal"><i
+                    class="fas fa-pen d-inline mr-2"></i></button>
+              </div>
+
+              <div class="box-perfil">
+                <div class="tb-perfil">
+                  <div class="tb-name">
+                    <div>Localidade</div>
+                  </div>
+                </div>
+                <div id="locality">
+
+                </div>
+              </div>
+
+              <div class="box-perfil">
+                <div class="tb-perfil">
+                  <div class="tb-name">
+                    <div>País</div>
+                  </div>
+                </div>
+                <div id="country">
+
+                </div>
+              </div>
+
+              <div class="box-perfil">
+                <div class="tb-perfil">
+                  <div class="tb-name">
+                    <div>Idade</div>
+                  </div>
+                </div>
+                <div id="age">
+
+                </div>
+              </div>
+
+              <div class="box-perfil">
+                <div class="tb-perfil">
+                  <div class="tb-name">
+                    <div>E-mail</div>
+                  </div>
+                </div>
+                <div id="email">
+
+                </div>
+              </div>
+
+              <div class="box-perfil">
+                <div class="tb-perfil">
+                  <div class="tb-name">
+                    <div>NIF</div>
+                  </div>
+                </div>
+                <div id="nif">
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="w-100 mx-4 mt-5">
+              <h4 class="text-secondary mt-5">Outras Opções</h4>
+
+              <div class="box-perfil botoes-perfil">
+                <a href="amigos.html" class="tb-perfil">
+                  <div class="tb-name">
+                    <div class="text-black">Amigos</div>
+                  </div>
+                  <div class="text-black"><i class="fas fa-users"></i></div>
+                </a>
+              </div>
+
+              <div class="box-perfil botoes-perfil">
+                <a href="Equipas.html" class="tb-perfil">
+                  <div class="tb-name">
+                    <div class="text-black">Equipas</div>
+                  </div>
+                  <div class="text-black"><i class="fas fa-users"></i></div>
+                </a>
+              </div>
+
+              <div class="box-perfil botoes-perfil">
+                <a href="Favoritos.html" class="tb-perfil">
+                  <div class="tb-name">
+                    <div class="text-black">Favoritos</div>
+                  </div>
+                  <div class="text-black"><i class="fas fa-bookmark"></i></div>
+                </a>
+              </div>
+
+              <div class="box-perfil botoes-perfil">
+                <a href="Reservas.html" class="tb-perfil">
+                  <div class="tb-name">
+                    <div class="text-black">Proximos Reservas</div>
+                  </div>
+                  <div class="text-black"><i class="fas fa-calendar-check"></i></div>
+                </a>
+              </div>
+
+              <div class="box-perfil botoes-perfil">
+                <a href="pedidos.html" class="tb-perfil">
+                  <div class="tb-name">
+                    <div class="text-black">Pedidos</div>
+                  </div>
+                  <div class="text-black"><i class="fas fa-user-plus"></i></div>
+                </a>
+              </div>
+
+              <div class="box-perfil botoes-perfil">
+                <a href="historico.html" class="tb-perfil">
+                  <div class="tb-name">
+                    <div class="text-black">Histórico</div>
+                  </div>
+                  <div class="text-black"><i class="fas fa-history"></i></div>
+                </a>
+              </div>
+
+              <div class="box-perfil botoes-perfil">
+                <a href="Regras.html" class="tb-perfil">
+                  <div class="tb-name">
+                    <div class="text-black">Regras</div>
+                  </div>
+                  <div class="text-black"><i class="fas fa-question"></i></div>
+                </a>
+              </div>
+
+
+              <button class="dropdown-btn box-perfil botoes-perfil pl-0">Definições
+                <i class="fa fa-caret-down px-0"></i>
+              </button>
+              <div class="dropdown-container">
+                <a class="tb-perfil my-3" data-toggle="modal" data-target="#changeModal">
+                  <div class="text-black ml-3">Alterar Palavra-passe</div>
+                </a>
+
+                <a class="tb-perfil" data-toggle="modal" data-target="#deleteModal">
+                  <div class="text-black ml-3">Apagar conta <i class="fas fa-exclamation-triangle text-red"></i></div>
+                </a>
+              </div>
+
+
+              <div class="box-perfil botoes-perfil">
+                <a class="tb-perfil" data-toggle="modal" data-target="#logoutModal">
+                  <div class="tb-name">
+                    <div class="text-red">Sair</div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- End of Main Content -->
+
+          <!-- Footer -->
+          <footer class="sticky-footer bg-primary">
+            <div class="my-n3 px-2">
+              <div class="row">
+
+                <div class="col my-auto mr-n4">
+                  <button onclick="location.href='pesquisa-campos.html'" class="search button-footer"><i
+                      class="fas fa-search ajustar"></i>
+                </div>
+
+                <div class="col my-auto">
+                  <button onclick="location.href='Reservas.html'" class="fav button-footer"><i
+                      class="fas fa-calendar-check ajustar"></i>
+                </div>
+
+                <div class="col">
+                  <button onclick="location.href='pagina-inicial.html'" class="button-footer2 house text-white"><i
+                      class="fas fa-home fa-2x"></i>
+                </div>
+
+                <div class="col my-auto">
+                  <button onclick="location.href='Regras.html'" class="chat button-footer"><i class="fas fa-question ajustar"></i>
+                </div>
+
+                <div class="col my-auto ml-n4">
+                  <button onclick="location.href='perfil.html'" class="fav button-footer"><i
+                      class="fas fa-user ajustar"></i>
+                </div>
+              </div>
+
+            </div>
+          </footer>
+          <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+      </div>
+      <!-- End of Page Wrapper -->
+
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+
+      <div class="modal fade" id="deleteALModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 250px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary" id="exampleModalLabel">Confirmação</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body text-black">
+          Deseja mesmo apagar todas as suas notificações?
+
+        </div>
+        <div class="modal-footer">
+          
+            <button class="btn btn-secondary mr-3" type="button" data-dismiss="modal">Cancelar</button>
+            <button class="btn btn-primary mr-3" type="submit" id="deleteAll">Confirmar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Logout Modal-->
+      <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 200px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Alterar Palavra-passe?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <form class="modal-body" method="POST">
+
+              Palavra-passe antiga:
+              <input type="password" id="oldPass" class="form-control" placeholder="Escreva aqui...">
+              <br>
+              Palavra-passe nova:
+              <input type="password" id="newPass" class="form-control" placeholder="Escreva aqui...">
+              <br>
+              Palavra-passe nova (repetir):
+              <input type="password" id="newPass2" class="form-control" placeholder="Escreva aqui...">
+
+
+            <div class="modal-footer pr-0">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-primary" type="submit" id="pass_change">Enviar</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+
+            <!-- Perfil Modal-->
+            <div class="modal fade" id="perfilModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 50px;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <form class="modal-body" method="POST">
+    
+                  <div id="show_information">
+    
+                    <label>Primeiro nome</label>
+                  <input type="text" id="newfirstname" class="form-control" placeholder="Primeiro nome">
+                  <br>
+                  <label>Último nome</label>
+                  <input type="text" id="newlastname" class="form-control" placeholder="Último nome">
+                  <br>
+                  <label>Localidade</label>
+                  <input type="text" id="newLocal" class="form-control" placeholder="Localidade">
+                  <br>
+                  <label>País</label>
+                  <input type="text" id="newPais" class="form-control" placeholder="Pais">
+                  <br>
+                  <label>NIF</label>
+                  <input type="text" class="form-control" id="newNif"                   
+                  data-rule="required|minlength-9" placeholder="NIF" maxlength="9" 
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                </div>
+                  
+                
+                <div class="modal-footer pr-0">
+                  <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                  <button class="btn btn-primary" type="submit" id="info_change">Enviar</button>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+
+
+
+      <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 250px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"> Apagar conta
+                <i class="fas fa-exclamation-triangle text-red"></i></h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Para apagar a conta atual pressione "Apagar".</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <a class="btn btn-primary text-white" data-toggle="modal" data-target="#harddeleteModal"
+                data-dismiss="modal">Apagar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="harddeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 250px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"> Confirmação </h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Tem a certeza que quer apagar a sua conta? Todos os dados serão perdidos!</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <a id="apagarContinha" class="btn btn-primary" href="login.html">Apagar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 250px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pronto para sair?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Selecione "Sair", caso esteja pronto para terminar a sessão.</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <a class="btn btn-primary text-white" id="botaoLogout">Sair</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Bootstrap core JavaScript-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+      <!-- Custom scripts for all pages-->
+      <script src="js/sb-admin-2.min.js"></script>
+
+      <script type="text/javascript" src="./controller/perfil.js"></script>
+      <script type="text/javascript" src="./controller/variables.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+      <script>
+    if('serviceWorker' in navigator){
+      try {
+        navigator.serviceWorker.register('sw.js');
+        console.log('SW registered');
+      } catch(error) {
+        console.log('SW register failed');
+      }
+    }
+  </script>
+      
+</body>
+
+</html>

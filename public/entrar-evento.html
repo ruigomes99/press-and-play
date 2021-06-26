@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+ 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Página de entrar num evento">
+  <meta name="author" content="PWALPHA">
+  <meta name="theme-color" content="#2F3BA2" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+
+
+  <title>Press&Play - Entrar Evento</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json" crossOrigin="use-credentials">
+  <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column vh-100">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-primary topbar static-top shadow">
+            
+            <button class="btn btn-link mr-5" onClick="history.go(-1)">
+              <i class="fa fa-arrow-left "></i>
+            </button>
+            <img class="icon-header ml-5" src="img/logo-icon.png">
+            <h3 class="font-weight-bolder">Evento</h3>
+  
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+  
+  
+              <!-- Nav Item - Alerts -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell fa-lg"></i>
+                  <!-- Counter - Alerts -->
+                  <span class="badge badge-danger badge-counter"></span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                  <h6 class="dropdown-header">
+                    Notificações
+                  </h6>
+                  <div class="notificacoesWindow" id="notification">
+
+					</div>
+					<span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+              data-target="#deleteALModal">
+					<a class="dropdown-item text-center text-danger small" id="mostra" >Apagar todas as notificações!</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+				<div class="container-fluid pb-4">
+
+					<!-- Content Row -->
+					<div class="row pb-5 mb-2">
+					
+					
+					<!-- Nome do Evento -->
+					<div id="eventName">
+						<h2 class="text-primary mt-3 text-weight-bold"> Evento X </h2>
+					</div>
+						
+					<div id="fieldPic">
+					<!-- Imagem 1-->
+						<div class="slideshow-container mt-5">
+							<div class="card bg-transparent button-footer h-100 w-100 mySlides fade2">
+								<div class="text-center">
+									<div class="row no-gutters align-items-center mt-n3 ml-n3 mr-n3">
+										<div>
+											<img class="imagem4" src="img/campos/imagem-campo.jpg">
+											<span
+												class="btn border-secondary btn-icon-split btn-lg mx-auto my-4 fav123456789"
+												onclick="Favoritos()">
+												<i class="far fa-bookmark mt-n5 pt-n5 adicionarFavoritos"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Imagem 2-->
+							<div class="card bg-transparent button-footer h-100 w-100 mySlides fade2">
+								<div class="text-center">
+									<div class="row no-gutters align-items-center mt-n3 ml-n3 mr-n3">
+										<div>
+											<img class="imagem4" src="img/campos/imagem-campo3.jpg">
+											<span
+												class="btn border-secondary btn-icon-split btn-lg mx-auto my-4 fav123456789"
+												onclick="Favoritos()">
+												<i class="far fa-bookmark mt-n5 pt-n5 adicionarFavoritos"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<a class="prev ml-n3" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+					</div>
+
+						<div class="w-100 text-center" id="fieldDots">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+						</div>						
+						
+
+						<!-- nome do campo -->
+						<div class="col-auto">
+							<div class="row">
+								<h2 class="mt-4 text-secondary ml-5" id="fieldName"><strong> GreenPlay </strong></h2>
+								<div id="stars" class="col my-auto fav button-footer pl-5 mt-5 pt-3 text-lg topbar font-white text-primary">
+									<i class="far fa-futbol"></i>
+									<i class="far fa-futbol"></i>
+									<i class="far fa-futbol"></i>
+									<i class="far fa-futbol"></i>
+									<i class="far fa-futbol"></i>
+								</div>
+							</div>
+							<div class="row float-right pr-n2 mt-n3" id="price">
+								<label class="font-weight-bold text-primary text-lg mr-5 pr-3"> 3€ </label>
+							</div>
+						</div>
+						
+						
+							<!-- localidade -->
+							<div class="card-body ml-5">
+								<div class="no-gutters align-items-center my-3">
+									<div class="row mt-5">
+										<i class="fas fa-calendar-day text-primary mt-2"></i>
+										<label class="font-weight-bold text-secondary text-lg ml-3">Dia do Evento:</label><br>
+									</div>
+									<div class="col-7 ml-5" id="eventDay">
+										<label class="font-weight-bold text-primary">31 dezembro 2019</label>
+									</div>
+								</div>
+								<br>
+
+								<div class="ml-n4 border-bottom-secondary mt-n4 align-items-center"></div>
+
+							
+					<!-- Hora do Evento -->
+							<div class="no-gutters align-items-center my-3">
+								<div class="row mt-5">
+									<i class="far fa-clock text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Hora do Evento:</label><br>
+								</div>
+								<div class="col-7 ml-5" id="hour">
+									<label class="font-weight-bold text-primary"> 14:00h </label>
+								</div>
+							</div>
+							<br>
+
+							<div class="ml-n4 border-bottom-secondary mt-n4 align-items-center"></div>
+							
+							
+					<!-- Tempo Restante -->
+							<div class="no-gutters align-items-center my-3">
+								<div class="row mt-5">
+									<i class="far fa-clock text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Tempo restante:</label><br>
+								</div>
+								<div class="col-7 ml-5 text-primary">
+									<label class="font-weight-bold text-primary" id="demo"></label>
+								</div>
+							</div>
+							<br>
+
+							<div class="ml-n4 border-bottom-secondary mt-n4 align-items-center"></div>
+						
+						
+					<!-- Localidade -->
+							<div class="no-gutters align-items-center my-3">
+								<div class="row mt-5">
+									<i class="fas fa-map-marker-alt text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Localidade:</label><br>
+								</div>
+								<div class="ml-5" id="locality">
+									<label class="font-weight-bold text-primary"> Quinchães, Portugal </label>
+								</div>
+							</div>
+							<br>
+
+							<div class="ml-n4 border-bottom-secondary mt-n4 align-items-center"></div>
+						</div>
+						
+
+						
+					
+
+
+							
+
+	<!-- Participantes -->
+						<button type="button" class="collapsible font-weight-bold text-secondary text-lg border-bottom-secondary bg-transparent ml-3"><i class="fas fa-users text-primary  mb-3 pb-2"></i>   Participantes</button>
+							<div class="content no-gutters align-items-center ml-4">
+								<div class="pre-scrollable420 tamanho1000 ml-n4">
+							<div id="show_players">
+							<ul class="px-0">
+									<!-- Amigo1 -->
+									<li class="myfilter text-white">
+										<a class="px-0 py-0">
+											<div class="card">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-2">
+															<h5 class="text-secondary font-weight-bold">Valeria Costa
+															</h5>
+															<label class="text-black">Valeria.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+									<!-- Amigo2 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-2">
+															<h5 class="text-secondary font-weight-bold">Carla Oliveira
+															</h5>
+															<label class="text-black">teste.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+
+									<!-- Amigo3 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-2">
+															<h5 class="text-secondary font-weight-bold">Maria Cristina
+															</h5>
+															<label class="text-black">massa.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+
+									<!-- Amigo4 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-2">
+															<h5 class="text-secondary font-weight-bold">Pedro Costa</h5>
+															<label class="text-black">terra.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+
+									<!-- Amigo5 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-2">
+															<h5 class="text-secondary font-weight-bold">Manuel Henriques
+															</h5>
+															<label class="text-black">verde.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+
+									<!-- Amigo6 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-2">
+															<h5 class="text-secondary font-weight-bold">Joao Teixeira
+															</h5>
+															<label class="text-black">rosa.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+									<!-- Amigo7 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-2">
+															<h5 class="text-secondary font-weight-bold">Rui Pedro</h5>
+															<label class="text-black">preto.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+									<!-- Amigo8 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-2">
+															<h5 class="text-secondary font-weight-bold">Jose Pereira
+															</h5>
+															<label class="text-black">mario.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+								</ul>
+							</div>
+								</div>
+							</div>
+							</div>
+							
+							
+
+						<div class="fixed-bottom2 btn bg-primary border-secondary btn-icon-split btn-lg mr-4 mb-2 mt-3">
+							<span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+								data-target="#logoutModal">
+								<i class="fas fa-door-open px-1 pt-2"></i>
+							</span>
+						</div>
+
+
+        
+        <!--End of Page Content-->
+            </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-primary">
+        <div class="my-n3 px-2">
+         <div class="row">
+
+           <div class="col my-auto mr-n4">
+              <button onclick="location.href='pesquisa-campos.html'" class="search button-footer"><i class="fas fa-search ajustar"></i>              
+           </div>
+
+           <div class="col my-auto">
+             <button onclick="location.href='Reservas.html'" class="fav button-footer"><i class="fas fa-calendar-check ajustar"></i>
+           </div>
+
+           <div class="col">
+             <button onclick="location.href='pagina-inicial.html'" class="button-footer2 house text-white"><i class="fas fa-home fa-2x"></i>
+           </div>
+
+           <div class="col my-auto">
+             <button onclick="location.href='Regras.html'" class="chat button-footer"><i class="fas fa-question ajustar"></i>
+           </div>
+
+           <div class="col my-auto ml-n4">             
+              <button onclick="location.href='perfil.html'" class="fav button-footer"><i class="fas fa-user ajustar"></i>
+           </div>
+         </div>
+ 
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+  <div class="modal fade" id="deleteALModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 250px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary" id="exampleModalLabel">Confirmação</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body text-black">
+          Deseja mesmo apagar todas as suas notificações?
+
+        </div>
+        <div class="modal-footer">
+          
+            <button class="btn btn-secondary mr-3" type="button" data-dismiss="modal">Cancelar</button>
+            <button class="btn btn-primary mr-3" type="submit" id="deleteAll">Confirmar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+			<button class="close ml-n2" type="button" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-arrow-left fa-xs text-secondary"></i>
+          </button>
+          <h5 class="modal-title text-secondary margemTop mr-5" id="exampleModalLabel">Informação sobre o Campo</h5>
+        </div>
+			<div class="modal-body pre-scrollable420">
+						<span class="closebtn text-primary"></span>
+						<div class="menu-content420">
+							<div id="teste70">
+								<span class="closebtn text-danger mt-n3 mr-n3"></span>
+							<div class="menu-content pl-3">
+								<div class="row ">
+									<i class="far fa-futbol text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-4">Material
+										disponivel:</label><br>
+								</div>
+								<div class="row ml-5" id="materialList">
+									<label class="font-weight-bold text-primary"> Coletes, bolas e luvas.</label>
+								</div>
+							</div>
+							<br>
+
+							<div class="border-bottom-secondary mt-n4 align-items-center"></div>
+
+							<div class="no-gutters align-items-center my-3 pl-3">
+								<div class="row mt-5">
+									<i class="fas fa-shower text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Balneários:</label><br>
+								</div>
+								<div class="row ml-5" id="infoBalneario">
+									<label class="font-weight-bold text-primary">Balneários para Homens e Mulheres.</label>
+								</div>
+							</div>
+							<br>
+
+							<div class="border-bottom-secondary mt-n4 align-items-center"></div>
+
+							<div class="no-gutters align-items-center my-3 pl-3">
+								<div class="row mt-5">
+									<i class="fas fa-car text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3 row">Parque de
+										Estacionamento:</label><br>
+								</div>
+								<div class="row ml-5" id="infoParque">
+									<label class="font-weight-bold text-primary row"> Parque Privado</label>
+								</div>
+							</div>
+							<br>
+
+							<div class="border-bottom-secondary mt-n4 align-items-center"></div>
+
+							<div class="no-gutters align-items-center my-3 pl-3">
+								<div class="row mt-5">
+										<i class="fas fa-cocktail text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Bar:</label><br>
+								</div>
+								<div class="row ml-5" id="infoBar">
+									<label class="font-weight-bold text-primary"> Serviço de Bar</label>
+								</div>
+							</div>
+							<br>
+							
+							<div class="border-bottom-secondary mt-n4 align-items-center"></div>
+
+							<div class="no-gutters align-items-center my-3 pl-3">
+								<div class="row mt-5">
+										<i class="fas fa-phone text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Telemóvel:</label><br>
+								</div>
+								<div class="row ml-5" id="phoneNumber">
+									<label class="font-weight-bold text-primary">253 363 457</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fixed-bottom420 btn bg-primary border-secondary btn-icon-split btn-lg mr-5 mb-2 mt-3">
+							<span id="entraEve" class="icon text-white bg-primary menu-icon"  >
+								<i class="fas fa-door-open px-1"></i>
+							</span>
+					</div>
+			</div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Logout Modal 3 -->
+  		<!--Continuação3 -->
+		<div class="modal fade" id="logoutModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+					<button class="close ml-n2" type="button" data-toggle="modal" data-dismiss="modal" data-target="#logoutModal" aria-label="Close">
+						<i class="fas fa-arrow-left fa-xs text-secondary"></i>
+					</button>
+					<h5 class="text-secondary marginRight"> Pagamento </h5>
+					</div>
+					<div class="modal-body pre-scrollable ml-4">
+						<a href="#" class="button123"><i class="padd2 fas fa-money-bill-alt"></i>Multibanco</a>
+						<a href="#" class="button123"><i class="padd fab fa-paypal"></i>PayPal</a>
+						<a href="#" class="button123"><i class="padd2 fas fa-coins"></i>MBway</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+  
+  
+  <script type="text/javascript" src="./controller/entrar-evento.js"></script>
+  <script type="text/javascript" src="./controller/variables.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+  <script>
+    if('serviceWorker' in navigator){
+      try {
+        navigator.serviceWorker.register('sw.js');
+        console.log('SW registered');
+      } catch(error) {
+        console.log('SW register failed');
+      }
+    }
+  </script>
+</body>
+
+</html>

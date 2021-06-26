@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Página de uma equipa">
+  <meta name="author" content="PWALPHA">
+  <meta name="theme-color" content="#2F3BA2" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Press&Play - Equipa</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json" crossOrigin="use-credentials">
+  <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column vh-100">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-primary topbar static-top shadow">
+
+          <button class="btn btn-link mr-5" onClick="history.go(-1)">
+            <i class="fa fa-arrow-left "></i>
+          </button>
+          <img class="icon-header ml-5" src="img/logo-icon.png">
+          <h3 class="font-weight-bolder">Equipa</h3>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-lg"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter"></span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Notificações
+                </h6>
+                <div class="notificacoesWindow" id="notification">
+                  
+          </div>
+          <span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+              data-target="#deleteALModal">
+          <a class="dropdown-item text-center text-danger small" id="mostra" >Apagar todas as notificações!</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid w-100">
+
+          <!-- Content Row -->
+
+
+          <!--- Amigos --->
+          <!--Barra de pesquisa-->
+          <div id="forOwner">
+          <button class="fixed-bottom5 btn bg-primary border-secondary btn-icon-split btn-lg mr-4 mb-2 mt-3" id="edit_teams" onclick="display()" >
+            <span class="icon text-white bg-primary menu-icon" onclick="toCheck()">
+              <i class="fas fa-pen px-1"></i>
+            </span>
+          </button>
+          </div>
+          <script>
+            function display() {
+              var x = document.getElementById("add_player");
+              var y = document.getElementById("remove_player");
+              var z = document.getElementById("exit_team");
+              var w = document.getElementById("transfer_lidership")
+              if (x.style.display === "block" && y.style.display === "block" && z.style.display === "block" && w.style.display === "block") {
+                x.style.display = "none";
+                y.style.display = "none";
+                z.style.display = "none";
+                w.style.display = "none";
+               /* document.getElementById("s1").disabled = true;*/
+              } else {
+                x.style.display = "block";
+                y.style.display = "block";
+                z.style.display = "block";
+                w.style.display = "block";
+                /*document.getElementById("s1").disabled = false;*/
+              }
+            }
+            </script>
+          <div class="fixed-bottom4 btn bg-primary border-secondary btn-icon-split btn-lg mr-4 mb-2 mt-3" id="add_player">
+            <span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+              data-target="#addplayerModal">
+              <i class="fas fa-plus px-1 pt-2"></i>
+            </span>
+          </div>
+         
+          
+          
+            <div class="fixed-bottom3 btn bg-primary border-secondary btn-icon-split btn-lg mr-6 mb-2 mt-3 " id="remove_player">
+            <span class="icon text-white bg-primary menu-icon">
+              <i class="fas fa-trash-alt px-1 pt-2"></i>
+            </span>
+          </div>
+
+          <div class="fixed-bottom7 btn bg-primary border-secondary btn-icon-split btn-lg mr-4 mb-2 mt-3" id="transfer_lidership">
+            <span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+              data-target="#transferLidershipModal">
+              <i class="fas fa-exchange-alt px-1 pt-2"></i>
+            </span>
+          </div>
+
+      
+
+          <div class="fixed-bottom8 btn bg-red border-secondary btn-icon-split btn-lg mr-6 mb-2 mt-3 " id="exit_team">
+            <span class="icon text-white bg-red menu-icon">
+              <i class="fas fa-sign-out-alt px-1 pt-2"></i>
+            </span>
+          </div>
+
+          
+
+
+          <div class=" pt-3 border-bottom-secondary bigBox row" style="margin: 0px;">
+            <div class="col-auto" >
+              <div id="teamImg">
+              <img class="img-show-inTeam" id="Pic" src="">
+              </div>
+              <div class="col-auto text-primary text-right" id="showAddImg" style="display:none">
+                <label for="file-upload" class="custom-file-upload">
+                  <i class="fa fa-plus"></i>
+                </label>
+              <input id="file-upload" type="file" accept="image/*"/>
+              </div>
+            </div>
+            <div class="col-6">
+              <form>
+                <div id="team_name">
+                  
+                </div>
+              <h6 class="text-primary ml-5 ">Pontuação media:</h6>
+              <div class="text-secondary ml-5" id="teamPoints"> pontos</div>
+              <div class="text-right text-secondary" id="confChanges">
+                <label hidden class="custom-file-upload">
+                  <i class="fa fa-check"></i>   
+                  <input id="confirmChang" type="submit" style="display: none;"/>                
+                </label>   
+                   
+              </div>
+            </form>
+            </div>
+          </div>
+        
+
+          <!--Fim da barra de pesquisa-->
+
+          <!-- Lista de Amigos -->
+
+          <div class="row pb-5" id="show_members">
+            
+              </div>
+            </div>
+                </div>
+          
+
+
+          <!-- End of Main Content -->
+
+
+          <!-- Footer -->
+          <footer class="sticky-footer bg-primary">
+            <div class="my-n3 px-2">
+              <div class="row">
+
+                <div class="col my-auto mr-n4">
+                  <button onclick="location.href='pesquisa-campos.html'" class="search button-footer"><i
+                      class="fas fa-search ajustar"></i>
+                </div>
+
+                <div class="col my-auto">
+                  <button onclick="location.href='Reservas.html'" class="fav button-footer"><i
+                      class="fas fa-calendar-check ajustar"></i>
+                </div>
+
+                <div class="col">
+                  <button onclick="location.href='pagina-inicial.html'" class="button-footer2 house text-white"><i
+                      class="fas fa-home fa-2x"></i>
+                </div>
+
+                <div class="col my-auto">
+                  <button onclick="location.href='Regras.html'" class="chat button-footer"><i class="fas fa-question ajustar"></i>
+                </div>
+
+                <div class="col my-auto ml-n4">
+                  <button onclick="location.href='perfil.html'" class="fav button-footer"><i
+                      class="fas fa-user ajustar"></i>
+                </div>
+              </div>
+
+            </div>
+          </footer>
+          <!-- End of Footer -->
+
+
+          <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+          <i class="fas fa-angle-up"></i>
+        </a>
+
+
+        <div class="modal fade" id="deleteALModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document" style="margin-top: 250px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-primary" id="exampleModalLabel">Confirmação</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body text-black">
+              Deseja mesmo apagar todas as suas notificações?
+    
+            </div>
+            <div class="modal-footer">
+              
+                <button class="btn btn-secondary mr-3" type="button" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-primary mr-3" type="submit" id="deleteAll">Confirmar</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="addplayerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class=" modal-dialog text-black align-items-center" role="document" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Adicionar jogador</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <form id="editarPerfil" class="modal-body2 ">
+              <div class="menu-content1">
+              
+
+              <input class="form-control2 myFilter3" type="text" placeholder="Procure..." id="myFilter3">
+                
+              <div id="show_people">
+                <ul class="container6" style="list-style-type: none;">
+                  <div id="checkboxes">
+
+                  <!-- Amigo1 -->
+                  <li class="myfilter3 text-white col-xl-3 col-md-6">
+                  <input type="checkbox" name="rGroup" value="11" id="r11" />
+                  <label class="whatever" for="r11"> 
+                    
+                      <div class="border-bottom-secondary bor-back">
+                        <div class="card-body4">
+                          <div class="row ml-2">
+                            <div class="col-2 mr-3">
+                              <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                            </div>
+                            <div class="col-3 pt-2">
+                              <img class="icon-header" src="img/nivel.png">
+                            </div>
+                            <div class="col-auto pt-3 ml-n2">
+                              <h5 class="text-secondary font-weight-bold">Valeria Costa</h5>
+                              <label class="text-black">Valeria.lua@hotmail.com</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                  </label></li>
+
+                  <li class="myfilter3 text-white col-xl-3 col-md-6">
+                  <input type="checkbox" name="rGroup" value="12" id="r12" />
+                  <label class="whatever" for="r12"> 
+                
+                      <div class="border-bottom-secondary bor-back">
+                        <div class="card-body4">
+                          <div class="row ml-2">
+                            <div class="col-2 mr-3">
+                              <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                            </div>
+                            <div class="col-3 pt-2">
+                              <img class="icon-header" src="img/nivel.png">
+                            </div>
+                            <div class="col-auto pt-3 ml-n2">
+                              <h5 class="text-secondary font-weight-bold">Carla Oliveira</h5>
+                              <label class="text-black">teste.lua@hotmail.com</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                  </label></li>
+
+                  <input type="checkbox" name="rGroup" value="13" id="r13" />
+                  <label class="whatever" for="r13"><li class="myfilter3 text-white col-xl-3 col-md-6">
+                   
+                      <div class="border-bottom-secondary bor-back">
+                        <div class="card-body4">
+                          <div class="row ml-2">
+                            <div class="col-2 mr-3">
+                              <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                            </div>
+                            <div class="col-3 pt-2">
+                              <img class="icon-header" src="img/nivel.png">
+                            </div>
+                            <div class="col-auto pt-3 ml-n2">
+                              <h5 class="text-secondary font-weight-bold">Maria Cristina</h5>
+                              <label class="text-black">massa.lua@hotmail.com</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                  </li></label>
+                  <input type="checkbox" name="rGroup" value="14" id="r14" />
+                  <label class="whatever" for="r14"><li class="myfilter3 text-white col-xl-3 col-md-6">
+                    
+                      <div class="border-bottom-secondary bor-back">
+                        <div class="card-body4">
+                          <div class="row ml-2">
+                            <div class="col-2 mr-3">
+                              <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                            </div>
+                            <div class="col-3 pt-2">
+                              <img class="icon-header" src="img/nivel.png">
+                            </div>
+                            <div class="col-auto pt-3 ml-n2">
+                              <h5 class="text-secondary font-weight-bold">Pedro Costa</h5>
+                              <label class="text-black">maca.lua@hotmail.com</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                  </li></label>
+                  <input type="checkbox" name="rGroup" value="15" id="r15" />
+                  <label class="whatever" for="r15">   <li class="myfilter3 text-white col-xl-3 col-md-6">
+                    
+                      <div class="border-bottom-secondary bor-back">
+                        <div class="card-body4">
+                          <div class="row ml-2">
+                            <div class="col-2 mr-3">
+                              <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                            </div>
+                            <div class="col-3 pt-2">
+                              <img class="icon-header" src="img/nivel.png">
+                            </div>
+                            <div class="col-auto pt-3 ml-n2">
+                              <h5 class="text-secondary font-weight-bold">Manuel Henriques</h5>
+                              <label class="text-black">verde.lua@hotmail.com</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li></label>
+                    <input type="checkbox" name="rGroup" value="16" id="r16" />
+                    <label class="whatever" for="r16">   <li class="myfilter3 text-white col-xl-3 col-md-6">
+                      
+                        <div class="border-bottom-secondary bor-back">
+                          <div class="card-body4">
+                            <div class="row ml-2">
+                              <div class="col-2 mr-3">
+                                <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                              </div>
+                              <div class="col-3 pt-2">
+                                <img class="icon-header" src="img/nivel.png">
+                              </div>
+                              <div class="col-auto pt-3 ml-n2">
+                                <h5 class="text-secondary font-weight-bold">Manuel Henriques</h5>
+                                <label class="text-black">verde.lua@hotmail.com</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li></label>
+                      <input type="checkbox" name="rGroup" value="17" id="r17" />
+                      <label class="whatever" for="r17">   <li class="myfilter3 text-white col-xl-3 col-md-6">
+                        
+                          <div class="border-bottom-secondary bor-back">
+                            <div class="card-body4">
+                              <div class="row ml-2">
+                                <div class="col-2 mr-3">
+                                  <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                                </div>
+                                <div class="col-3 pt-2">
+                                  <img class="icon-header" src="img/nivel.png">
+                                </div>
+                                <div class="col-auto pt-3 ml-n2">
+                                  <h5 class="text-secondary font-weight-bold">Manuel Henriques</h5>
+                                  <label class="text-black">verde.lua@hotmail.com</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li></label>
+                        <input type="checkbox" name="rGroup" value="18" id="r18" />
+                        <label class="whatever" for="r18">   <div class="myfilter3 text-white col-xl-3 col-md-6">
+                          
+                            <div class="border-bottom-secondary bor-back">
+                              <div class="card-body4">
+                                <div class="row ml-2">
+                                  <div class="col-2 mr-3">
+                                    <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                                  </div>
+                                  <div class="col-3 pt-2">
+                                    <img class="icon-header" src="img/nivel.png">
+                                  </div>
+                                  <div class="col-auto pt-3 ml-n2">
+                                    <h5 class="text-secondary font-weight-bold">Manuel Henriques</h5>
+                                    <label class="text-black">verde.lua@hotmail.com</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+</div>
+            </ul>
+                
+              
+              <br>
+  
+            </div>
+            
+            <div class="modal-footer pr-0">
+              <button class="btn btn-secondary mr-3" type="button" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-primary mr-3" type="submit" id="botaoEditar">Adicionar</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+  </div>
+  <!-- transferir liderança -->
+  <div class="modal fade" id="transferLidershipModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class=" modal-dialog text-black align-items-center" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">Tranferir liderança</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <form  class="modal-body2 ">
+        <div class="menu-content1">
+        
+
+        <input class="form-control2 myFilter5" type="text" placeholder="Procure..." id="myFilter5">
+          
+        <div id="show_toTransfer">
+          <ul class="container6" style="list-style-type: none;">
+            <div id="radios">
+
+            <!-- Amigo1 -->
+            <li class="myfilter5 text-white col-xl-3 col-md-6">
+            <input type="radio" name="rGroup" value="21" id="r21" />
+            <label class="whatever" for="r21"> 
+              
+                <div class="border-bottom-secondary bor-back">
+                  <div class="card-body4">
+                    <div class="row ml-2">
+                      <div class="col-2 mr-3">
+                        <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                      </div>
+                      <div class="col-3 pt-2">
+                        <img class="icon-header" src="img/nivel.png">
+                      </div>
+                      <div class="col-auto pt-3 ml-n2">
+                        <h5 class="text-secondary font-weight-bold">Valeria Costa</h5>
+                        <label class="text-black">Valeria.lua@hotmail.com</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+            </label></li>
+
+            <li class="myfilter5 text-white col-xl-3 col-md-6">
+            <input type="radio" name="rGroup" value="22" id="r22" />
+            <label class="whatever" for="r22"> 
+          
+                <div class="border-bottom-secondary bor-back">
+                  <div class="card-body4">
+                    <div class="row ml-2">
+                      <div class="col-2 mr-3">
+                        <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                      </div>
+                      <div class="col-3 pt-2">
+                        <img class="icon-header" src="img/nivel.png">
+                      </div>
+                      <div class="col-auto pt-3 ml-n2">
+                        <h5 class="text-secondary font-weight-bold">Carla Oliveira</h5>
+                        <label class="text-black">teste.lua@hotmail.com</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+            </label></li>
+
+            <input type="radio" name="rGroup" value="23" id="r23" />
+            <label class="whatever" for="r23"><li class="myfilter5 text-white col-xl-3 col-md-6">
+             
+                <div class="border-bottom-secondary bor-back">
+                  <div class="card-body4">
+                    <div class="row ml-2">
+                      <div class="col-2 mr-3">
+                        <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                      </div>
+                      <div class="col-3 pt-2">
+                        <img class="icon-header" src="img/nivel.png">
+                      </div>
+                      <div class="col-auto pt-3 ml-n2">
+                        <h5 class="text-secondary font-weight-bold">Maria Cristina</h5>
+                        <label class="text-black">massa.lua@hotmail.com</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+            </li></label>
+            <input type="radio" name="rGroup" value="24" id="r24" />
+            <label class="whatever" for="r24"><li class="myfilter5 text-white col-xl-3 col-md-6">
+              
+                <div class="border-bottom-secondary bor-back">
+                  <div class="card-body4">
+                    <div class="row ml-2">
+                      <div class="col-2 mr-3">
+                        <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                      </div>
+                      <div class="col-3 pt-2">
+                        <img class="icon-header" src="img/nivel.png">
+                      </div>
+                      <div class="col-auto pt-3 ml-n2">
+                        <h5 class="text-secondary font-weight-bold">Pedro Costa</h5>
+                        <label class="text-black">maca.lua@hotmail.com</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+            </li></label>
+            <input type="radio" name="rGroup" value="25" id="r25" />
+            <label class="whatever" for="r25">   <li class="myfilter5 text-white col-xl-3 col-md-6">
+              
+                <div class="border-bottom-secondary bor-back">
+                  <div class="card-body4">
+                    <div class="row ml-2">
+                      <div class="col-2 mr-3">
+                        <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                      </div>
+                      <div class="col-3 pt-2">
+                        <img class="icon-header" src="img/nivel.png">
+                      </div>
+                      <div class="col-auto pt-3 ml-n2">
+                        <h5 class="text-secondary font-weight-bold">Manuel Henriques</h5>
+                        <label class="text-black">verde.lua@hotmail.com</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li></label>
+              <input type="radio" name="rGroup" value="26" id="r26" />
+              <label class="whatever" for="r26">   <li class="myfilter5 text-white col-xl-3 col-md-6">
+                
+                  <div class="border-bottom-secondary bor-back">
+                    <div class="card-body4">
+                      <div class="row ml-2">
+                        <div class="col-2 mr-3">
+                          <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                        </div>
+                        <div class="col-3 pt-2">
+                          <img class="icon-header" src="img/nivel.png">
+                        </div>
+                        <div class="col-auto pt-3 ml-n2">
+                          <h5 class="text-secondary font-weight-bold">Manuel Henriques</h5>
+                          <label class="text-black">verde.lua@hotmail.com</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li></label>
+                <input type="radio" name="rGroup" value="27" id="r27" />
+                <label class="whatever" for="r27">   <li class="myfilter5 text-white col-xl-3 col-md-6">
+                  
+                    <div class="border-bottom-secondary bor-back">
+                      <div class="card-body4">
+                        <div class="row ml-2">
+                          <div class="col-2 mr-3">
+                            <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                          </div>
+                          <div class="col-3 pt-2">
+                            <img class="icon-header" src="img/nivel.png">
+                          </div>
+                          <div class="col-auto pt-3 ml-n2">
+                            <h5 class="text-secondary font-weight-bold">Manuel Henriques</h5>
+                            <label class="text-black">verde.lua@hotmail.com</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li></label>
+                  <input type="radio" name="rGroup" value="28" id="r28" />
+                  <label class="whatever" for="r28">   <div class="myfilter5 text-white col-xl-3 col-md-6">
+                    
+                      <div class="border-bottom-secondary bor-back">
+                        <div class="card-body4">
+                          <div class="row ml-2">
+                            <div class="col-2 mr-3">
+                              <img class="rounded-circle" src="img/perfil/perfil.jpeg">
+                            </div>
+                            <div class="col-3 pt-2">
+                              <img class="icon-header" src="img/nivel.png">
+                            </div>
+                            <div class="col-auto pt-3 ml-n2">
+                              <h5 class="text-secondary font-weight-bold">Manuel Henriques</h5>
+                              <label class="text-black">verde.lua@hotmail.com</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+</div>
+      </ul>
+          
+        
+        <br>
+
+      </div>
+      
+      <div class="modal-footer pr-0">
+        <button class="btn btn-secondary mr-3" type="button" data-dismiss="modal">Cancelar</button>
+        <button class="btn btn-primary mr-3" type="submit" id="botaoTransferir">Transferir</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <script type="text/javascript" src="./controller/equipa.js"></script>
+        <script type="text/javascript" src="./controller/variables.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+        <script>
+    if('serviceWorker' in navigator){
+      try {
+        navigator.serviceWorker.register('sw.js');
+        console.log('SW registered');
+      } catch(error) {
+        console.log('SW register failed');
+      }
+    }
+  </script>
+</body>
+
+</html>

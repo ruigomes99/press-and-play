@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Página Regras">
+  <meta name="author" content="PWALPHA">
+  <meta name="theme-color" content="#2F3BA2" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Press&Play - Regras</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json" crossOrigin="use-credentials">
+  <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column vh-100">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-primary topbar static-top shadow">
+
+          <button class="btn btn-link mr-5" onClick="history.go(-1)">
+            <i class="fa fa-arrow-left "></i>
+          </button>
+          <img class="icon-header ml-4 pl-3" src="img/logo-icon.png">
+          <h3 class="font-weight-bolder">Regras</h3>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-lg"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter"></span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Notificações
+                </h6>
+                <div class="notificacoesWindow" id="notification">
+                  
+          </div>
+          <span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+              data-target="#deleteALModal">
+          <a class="dropdown-item text-center text-danger small" id="mostra" >Apagar todas as notificações!</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid pt-2">
+            <h3 class="text-primary">Perguntas Frequentes:</h3>
+            <button class="dropdown-btn box-perfil botoes-perfil pl-0 border-bottom-secondary">Jogos
+                <i class="fa fa-caret-down px-0"></i>
+              </button>
+              <div class="dropdown-container text-black">
+                <br>
+                <h5>Quantas pessoas podem participar por partida?</h5>
+                Apenas 10 jogadores podem participar por cada partida, mas não é necessário um aluguer de campo ter 10 elementos para ocorrer.
+                <br><br>
+                <h5>Como me posso juntar a um jogo?</h5>
+                Há três opções para participar em jogos:<br>
+                1ª: Juntar-se a um dos eventos disponíveis;
+                2º: Alugar um campo;
+                3º: Juntar-se a um campo alugado por um amigo (só é possível juntar-se a este aluguer se for convidado pelo dono da reserva).
+                <br><br>
+                <h5>Como alugo um campo?</h5>
+                Para alugar um campo vá à página das pesquisas (representada por uma lupa) e carregue no campo desejado. Ao entrar na página do campo, terá um botão no canto inferior direito destinado para esse fim.
+                <br><br>
+                <h5>O que devo levar?</h5>
+                É aconselhado que leve roupa tanto claro como escura (no caso de não serem fornecidos coletes).
+                <br><br>
+                <h5>Como me posso juntar a uma partida após receber um convite?</h5>
+                Ao lhe ser enviado um convite, receberá uma notificação no canto superior direito. Após receber esta notificação já está adicionado à partida.
+                <br><br>
+                <h5>Posso alugar um campo sem ter 10 participantes?</h5>
+                Sim, no caso de alugares um campo não és obrigado a ter mais nenhum jogador inscrito para além de ti.
+              </div>
+                <button class="dropdown-btn box-perfil botoes-perfil pl-0 border-bottom-secondary">Evento
+                    <i class="fa fa-caret-down px-0"></i>
+                  </button>
+                  <div class="dropdown-container text-black">
+                    <br>
+                    <h5>O que é um Evento?</h5>
+                        Um evento é basicamente um aluguer de campo, a única diferença é que outros elementos da plataforma podem-se juntar ao mesmo e jogar contigo/contra ti.
+                    <br><br>
+                    <h5>Quem se pode juntar ao meu Evento?</h5>
+                    Qualquer membro da plataforma pode participar no teu Evento.
+                    <br><br>                  
+                    </div>
+                    <button class="dropdown-btn box-perfil botoes-perfil pl-0 border-bottom-secondary">Utilizadores
+                        <i class="fa fa-caret-down px-0"></i>
+                      </button>
+                      <div class="dropdown-container text-black">
+                        <br>
+                        <h5>Posso denunciar um jogador? Se sim, como o faço?</h5>
+                        Para denunciar um jogador, basta ir ao seu perfil e pressionar o botão que se encontra no canto inferior direito representado por uma bandeira.
+                        <br><br>
+                        <h5>Como altero a minha foto de perfil?</h5>
+                        Para alterar a sua foto de perfil tem de ir à sua página de perfil (ícone na barra principal situado no canto inferior direito). Já dentro da página do perfil, carrege no sinal de "+" presente no canto inferior direito da imagem de perfil a alterar.
+                        <br><br>
+                        <h5>Como posso alterar a informação no meu perfil?</h5>
+                        Para alterar a informação do perfil basta, estando presente na página do perfil, carregar no ícone do lápis que se encontra à direita de "Informações pessoais".
+                        <br><br>
+                        <h5>Como termino a sessão?</h5>
+                        Para terminar a sessão tem apenas de carregar no botão "Sair" situado no fundo da página do perfil sobre o canto esquerdo.
+                        <br><br>
+                        <h5>Como altero a palavra-passe?</h5>
+                        Para alterar a palavra-passe, tem de ir à secção das definições na sua página de perfil e escolher "Alterar palavra-passe".
+                        <br><br>
+                        <h5>É possível apagar a minha conta?</h5>
+                        Sim. Para tal fim tem de ir à secção "definiões" no perfil e escolher a "Apagar conta".
+                      </div>
+                        <button class="dropdown-btn box-perfil botoes-perfil pl-0 border-bottom-secondary">Campos
+                            <i class="fa fa-caret-down px-0"></i>
+                          </button>
+                          <div class="dropdown-container text-black">
+                            <br>
+                            <h5>Como alugo um campo?</h5>
+                            Na página de cada campo há um botão no campo inferior direito destinado a esse fim.
+                            <br><br>
+                            <h5>Posso obter mais informação sobre um campo?</h5>
+                            Toda a informação que temos sobre os campos estão apresentadas na sua respetiva página. Caso necessite de mais informação, aconselhamos que tente o número de apoio (caso existente) presente na página do mesmo.
+                            <br><br>
+                            <h5>Como posso aceder mais facilmente a um campo que visite frequentemente?</h5>  
+                            Para mais facilmente aceder a um campo basta guardá-lo nos favoritos. Para o fazer basta carregar no botão presente no canto superior direito das mesmas.
+                          </div>
+                            <button class="dropdown-btn box-perfil botoes-perfil pl-0 border-bottom-secondary">Equipas
+                                <i class="fa fa-caret-down px-0"></i>
+                              </button>
+                              <div class="dropdown-container text-black">
+                                <br>
+                                <h5>O que é uma equipa?</h5>
+                                Uma equipa é um grupo de amigos e tem como finalidade agilizar o processo de convite para eventos. Apenas amigos podem ser convidados para fazer parte das equipas.
+                                <br><br>
+                                <h5>Posso remover jogadores da minha equipa?</h5>
+                                Só se fores o "dono" dessa equipa, caso contrário apenas podes sair da equipa. Caso o "dono" da equipa queira sair da mesma, tem que transferir a liderança para outro elemento.  
+                                <br><br>
+                                <h5>Como adiciono um jogador à minha equipa?</h5>
+                                Caso sejas o dono da equipa, podes adicionar membros na página da equipa, ao carregar no botão "+"(este botão só aparece após carregar no botão de editar, representado por uma caneta).
+                                <br><br>
+                                <h5>Há pré-requesitos para criar uma equipa? E como é que crio uma?</h5>
+                                Não, qualquer membro é livre de criar uma equipa nova. Para criar uma equipa carregue no botão "+" apresentado após carregar no botão "editar" representado por uma caneta (localizado na página das equipas).
+                                <br><br>
+                                <h5>Como altero a foto da equipa?</h5>
+                                Para mudar a foto da equipa basta ir á página da equipa a qual quer mudar a foto e carregar no botão "+" presente no canto inferior direito da foto atual da equipa.
+                              </div>
+                <buttom class="dropdown-btn box-perfil botoes-perfil pl-0 text-primary letra-regras">Código de conduta
+                <i class="fa fa-caret-down px-0"></i>           
+                </buttom>
+                  <div class="dropdown-container text-black">
+                    É proibido:<br>
+                    - Insultar, agredir, assediar ou prejudicar de qualquer maneira a experiência de outros jogadores;<br>
+                    - Exceder o tempo destinado ao aluguer do campo pré-definido;<br>
+                    - Causar danos materias;<br>
+                  </div>
+                  <buttom class="dropdown-btn box-perfil botoes-perfil pl-0 text-primary letra-regras">Sistema de Pontos
+                    <i class="fa fa-caret-down px-0"></i>           
+                    </buttom>
+                      <div class="dropdown-container text-black">
+                        O utilizador ganha 10 pontos por cada inscrição / aluguer de campo. Após 60 pontos acumulados, sobe um nível e volta a começar de novo. Quando sobe de nível tem um desconto de 5€ no próximo aluguer (caso o valor do aluguer seja acima de 5€, caso contrário passa ao mesmo).
+                      </div>
+                      <buttom class="dropdown-btn box-perfil botoes-perfil pl-0 text-primary letra-regras">Sistema de Pagamento        
+                        <i class="fa fa-caret-down px-0"></i> 
+                    </buttom>
+                          <div class="dropdown-container text-black">
+                            Pode-se realizar pagamento por:<br>
+                            - Transferência bancária<br>
+                            - Cartão de Crédito<br>
+                            - MB WAY <br>
+                            <br>
+                          </div>
+              </div>
+              </div>
+          </div>
+          <!-- End of Main Content -->
+
+          <!-- Footer -->
+          <footer class="sticky-footer bg-primary">
+            <div class="my-n3 px-2">
+              <div class="row">
+
+                <div class="col my-auto mr-n4">
+                  <button onclick="location.href='pesquisa-campos.html'" class="search button-footer"><i
+                      class="fas fa-search ajustar"></i>
+                </div>
+
+                <div class="col my-auto">
+                  <button onclick="location.href='Reservas.html'" class="fav button-footer"><i
+                      class="fas fa-calendar-check ajustar"></i>
+                </div>
+
+                <div class="col">
+                  <button onclick="location.href='pagina-inicial.html'" class="button-footer2 house text-white"><i
+                      class="fas fa-home fa-2x"></i>
+                </div>
+
+                <div class="col my-auto">
+                  <button onclick="location.href='Regras.html'" class="chat button-footer"><i class="fas fa-question ajustar"></i>
+                </div>
+
+                <div class="col my-auto ml-n4">
+                  <button onclick="location.href='perfil.html'" class="fav button-footer"><i
+                      class="fas fa-user ajustar"></i>
+                </div>
+              </div>
+
+            </div>
+          </footer>
+          <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+      </div>
+      <!-- End of Page Wrapper -->
+
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+
+      <div class="modal fade" id="deleteALModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="margin-top: 250px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary" id="exampleModalLabel">Confirmação</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body text-black">
+            Deseja mesmo apagar todas as suas notificações?
+  
+          </div>
+          <div class="modal-footer">
+            
+              <button class="btn btn-secondary mr-3" type="button" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-primary mr-3" type="submit" id="deleteAll">Confirmar</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Logout Modal-->
+      <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 200px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Alterar Palavra-passe?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <form class="modal-body" method="POST">
+
+              Palavra-passe antiga:
+              <input type="password" id="oldPass" class="form-control" placeholder="Escreva aqui...">
+              <br>
+              Palavra-passe nova:
+              <input type="password" id="newPass" class="form-control" placeholder="Escreva aqui...">
+              <br>
+              Palavra-passe nova (repetir):
+              <input type="password" id="newPass2" class="form-control" placeholder="Escreva aqui...">
+
+
+            <div class="modal-footer pr-0">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-primary" type="submit" id="pass_change">Enviar</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+
+            <!-- Perfil Modal-->
+            <div class="modal fade" id="perfilModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 200px;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <form class="modal-body" method="POST">
+    
+                  <input type="text" id="newfirstname" class="form-control" placeholder="Primeiro nome">
+                  <br>
+                  <input type="text" id="newlastname" class="form-control" placeholder="Último nome">
+                  <br>
+                  <input type="text" id="newLocal" class="form-control" placeholder="Localidade">
+                  <br>
+                  <input type="text" id="newPais" class="form-control" placeholder="Pais">
+                  
+                
+                <div class="modal-footer pr-0">
+                  <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                  <button class="btn btn-primary" type="submit" id="info_change">Enviar</button>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+
+
+
+      <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 250px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"> Apagar conta
+                <i class="fas fa-exclamation-triangle text-red"></i></h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Para apagar a conta atual pressione "Apagar".</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <a class="btn btn-primary text-white" data-toggle="modal" data-target="#harddeleteModal"
+                data-dismiss="modal">Apagar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="harddeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 250px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"> Confirmação </h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Tem a certeza que quer apagar a sua conta? Todos os dados serão perdidos!</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <a class="btn btn-primary" href="login.html">Apagar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 250px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pronto para sair?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Selecione "Sair", caso esteja pronto para terminar a sessão.</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <a class="btn btn-primary" href="login.html">Sair</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Bootstrap core JavaScript-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+      <!-- Custom scripts for all pages-->
+      <script src="js/sb-admin-2.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+
+      <!--<script type="text/javascript" src="./controller/perfil.js"></script>-->
+      <script>
+    if('serviceWorker' in navigator){
+      try {
+        navigator.serviceWorker.register('sw.js');
+        console.log('SW registered');
+      } catch(error) {
+        console.log('SW register failed');
+      }
+    }
+  </script>
+      
+</body>
+
+</html>

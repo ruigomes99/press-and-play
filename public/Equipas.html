@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Página das equipas">
+  <meta name="author" content="PWALPHA">
+  <meta name="theme-color" content="#2F3BA2" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Press&Play - Equipas</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json" crossOrigin="use-credentials">
+  <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column vh-100">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-primary topbar static-top shadow">
+
+          <button class="btn btn-link mr-5" onClick="history.go(-1)">
+            <i class="fa fa-arrow-left "></i>
+          </button>
+          <img class="icon-header ml-4 pl-2" src="img/logo-icon.png">
+          <h3 class="font-weight-bolder">Equipas</h3>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-lg"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter"></span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Notificações
+                </h6>
+                <div class="notificacoesWindow" id="notification">
+                  
+          </div>
+          <span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+              data-target="#deleteALModal">
+          <a class="dropdown-item text-center text-danger small" id="mostra" >Apagar todas as notificações!</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid px-3">
+
+          <!--Barra de pesquisa-->
+
+          <div class="searchbar w-100 ml-n3">
+            <i class="fas fa-search fa-lg text-primary icon-pesquisa"></i>
+            <input class="texto-pesquisa myFilter" type=text placeholder="Pesquise" id="myFilter"></input>
+          </div>
+          
+          <button class="fixed-bottom5 btn bg-primary border-secondary btn-icon-split btn-lg mr-4 mb-2 mt-3" id="edit_teams" onclick="display()" >
+            <span class="icon text-white bg-primary menu-icon" onclick="toCheck()">
+              <i class="fas fa-pen px-1"></i>
+            </span>
+          </button>
+          <script>
+            function display() {
+              var x = document.getElementById("add_teams");
+              var y = document.getElementById("remove_teams");
+              if (x.style.display === "block" && y.style.display === "block") {
+                x.style.display = "none";
+                y.style.display = "none";
+               /* document.getElementById("s1").disabled = true;*/
+              } else {
+                x.style.display = "block";
+                y.style.display = "block";
+                /*document.getElementById("s1").disabled = false; */
+              }
+            }
+            </script>
+
+          <div class="fixed-bottom4 btn bg-primary border-secondary btn-icon-split btn-lg mr-4 mb-2 mt-3 " id="add_teams">
+            <span class="icon text-white bg-primary menu-icon pt-2" data-toggle="modal"
+              data-target="#addteamModal">
+              <i class="fas fa-plus px-1"></i>
+            </span>
+          </div>
+          
+          
+            <div class="fixed-bottom3 btn bg-primary border-secondary btn-icon-split btn-lg mr-6 mb-2 mt-3 " id="remove_teams">
+            <span class="icon text-white bg-primary menu-icon pt-2">
+              <i class="fas fa-trash-alt px-1"></i>
+            </span>
+          </div>
+       
+          <!--Fim da barra de pesquisa-->
+
+          <!-- Content Row -->
+          <div class="row pt-5" id="show_teams">
+
+            
+      
+
+        </div>
+          <!-- End of Main Content -->
+
+          <!-- Footer -->
+          <footer class="sticky-footer bg-primary">
+            <div class="my-n3 px-2">
+              <div class="row">
+
+                <div class="col my-auto mr-n4">
+                  <button onclick="location.href='pesquisa-campos.html'" class="search button-footer"><i
+                      class="fas fa-search ajustar"></i>
+                </div>
+
+                <div class="col my-auto">
+                  <button onclick="location.href='Reservas.html'" class="fav button-footer"><i
+                      class="fas fa-calendar-check ajustar"></i>
+                </div>
+
+                <div class="col">
+                  <button onclick="location.href='pagina-inicial.html'" class="button-footer2 house text-white"><i
+                      class="fas fa-home fa-2x"></i>
+                </div>
+
+                <div class="col my-auto">
+                  <button onclick="location.href='Regras.html'" class="chat button-footer"><i class="fas fa-question ajustar"></i>
+                </div>
+
+                <div class="col my-auto ml-n4">
+                  <button onclick="location.href='perfil.html'" class="fav button-footer"><i
+                      class="fas fa-user ajustar"></i>
+                </div>
+              </div>
+
+            </div>
+          </footer>
+          <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+      </div>
+      <!-- End of Page Wrapper -->
+
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+
+      <div class="modal fade" id="deleteALModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="margin-top: 250px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary" id="exampleModalLabel">Confirmação</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body text-black">
+            Deseja mesmo apagar todas as suas notificações?
+  
+          </div>
+          <div class="modal-footer">
+            
+              <button class="btn btn-secondary mr-3" type="button" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-primary mr-3" type="submit" id="deleteAll">Confirmar</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Logout Modal-->
+      <div class="modal fade" id="addteamModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog text-black align-items-center" role="document" style="margin-top: 200px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Criar Equipa</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <form id="editarPerfil" class="modal-body">
+            
+            <input type="text" id="teamname" class="form-control" placeholder="Nome da equipa">
+            <br>
+            O nome da equipa apenas pode ter letras e não pode ter espaços
+            
+          
+          <div class="modal-footer pr-0">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <button class="btn btn-primary" type="submit" id="botaoEditar">Criar</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+      <!-- Bootstrap core JavaScript-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+      <!-- Custom scripts for all pages-->
+      <script src="js/sb-admin-2.min.js"></script>
+
+      <script type="text/javascript" src="./controller/equipas.js"></script>
+      <script type="text/javascript" src="./controller/variables.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+      <script>
+    if('serviceWorker' in navigator){
+      try {
+        navigator.serviceWorker.register('sw.js');
+        console.log('SW registered');
+      } catch(error) {
+        console.log('SW register failed');
+      }
+    }
+  </script>
+</body>
+
+</html>

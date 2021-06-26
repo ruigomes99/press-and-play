@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Página de campos">
+	<meta name="author" content="PWALPHA">
+    <meta name="theme-color" content="#2F3BA2" />	
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<style>
+		input[type="date"]::-webkit-inner-spin-button,
+		input[type="date"]::-webkit-calendar-picker-indicator {
+			color: transparent;
+			-webkit-appearance: none;
+		}
+		
+		input[type="date"]::-webkit-inner-spin-button,    
+		input[type="date"]::-webkit-clear-button { display: none; }
+	</style>
+
+
+	<title>Press&Play - Campo</title>
+
+	<!-- Custom fonts for this template-->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link
+		href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+		rel="stylesheet">
+
+	<!-- Custom styles for this template-->
+	<link href="css/sb-admin-2.css" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json" crossOrigin="use-credentials">
+  <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
+</head>
+
+<body id="page-top">
+
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column vh-100">
+
+			<!-- Main Content -->
+			<div id="content">
+
+				<!-- Topbar -->
+				<nav class="navbar navbar-expand navbar-light bg-primary topbar static-top shadow">
+
+					<button class="btn btn-link mr-5" onClick="history.go(-1)">
+						<i class="fa fa-arrow-left "></i>
+					</button>
+					<img class="icon-header ml-5" src="img/logo-icon.png">
+					<h3 class="font-weight-bolder">Campo</h3>
+
+					<!-- Topbar Navbar -->
+					<ul class="navbar-nav ml-auto">
+
+
+						<!-- Nav Item - Alerts -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-bell fa-lg"></i>
+								<!-- Counter - Alerts -->
+								<span class="badge badge-danger badge-counter"></span>
+							</a>
+							<!-- Dropdown - Alerts -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								aria-labelledby="alertsDropdown">
+								<h6 class="dropdown-header">
+									Notificações
+								</h6>
+								<div class="notificacoesWindow" id="notification">
+									
+									</div>
+									<span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+              data-target="#deleteALModal">
+									<a class="dropdown-item text-center text-danger small" id="mostra" >Apagar todas as notificações!</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<!-- End of Topbar -->
+
+				<!-- Begin Page Content -->
+				<div class="container-fluid">
+
+					<!-- Content Row -->
+					<div class="row">
+						<div class=" bg-transparent px-0 py-0 mx-0 my-0"  id="favBut">	
+							<i class="parateste far fa-bookmark fa-lg pt-3  adicionarFavoritos text-red"></i>
+						</div>
+
+						<div id="fieldPic" style="margin-top: -35px;">
+						
+					</div>
+						<div class="w-100 text-center mt-5 " id="fieldDots">
+							
+						</div>
+
+
+
+						<!-- nome do campo -->
+						<div class="col-auto">
+							<div class="row">
+								<h2 class="mt-4 text-secondary ml-5" id="fieldName">
+									
+									</h2>
+								<div id="stars" class="col my-auto fav button-footer pl-5 mt-5 pt-3 text-lg topbar font-white text-primary">
+									
+								</div>
+							</div>
+							<div class="row float-right pr-n2 mt-n3" id="price">
+								
+							</div>
+						</div>
+
+
+						<!-- localidade -->
+						<div class="card-body ml-5">
+							<div class="no-gutters align-items-center mb-3 mt-n2 ml-n4">
+								<div class="row">
+									<i class="fas fa-map-marker-alt text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Localidade:</label><br>
+								</div>
+								<div class="row ml-5" id="locality">
+									
+								</div>
+							</div><br>
+
+
+							<div class="ml-n4 border-bottom-secondary mt-n4 align-items-center"></div>
+
+							<div class="no-gutters align-items-center my-3 ml-n4">
+								<div class="row mt-5">
+									<i class="fas fa-phone text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Telemóvel:</label><br>
+								</div>
+								<div class="row ml-5" id="phoneNumber">
+									
+								</div>
+							</div>
+							<br>
+
+							<div class="ml-n4 border-bottom-secondary mt-n4 align-items-center"></div>
+
+							<div class="no-gutters align-items-center my-3 ml-n4">
+								<div class="row mt-5">
+									<i class="far fa-futbol text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Material
+										disponivel:</label><br>
+								</div>
+								<div class="row ml-5" id="materialList">
+									<label class="font-weight-bold text-primary"> Coletes, bolas e luvas.
+										<small><strong><em><br> Incluido no valor do aluguer
+												</em></strong></small></label>
+								</div>
+							</div>
+							<br>
+
+							<div class="ml-n4 border-bottom-secondary mt-n4 align-items-center"></div>
+
+							<div class="no-gutters align-items-center my-3 ml-n4">
+								<div class="row mt-5">
+									<i class="fas fa-shower text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Comodidades:</label><br>
+								</div>
+								<div class="row ml-5" id="infoBalneario">
+									<label class="font-weight-bold text-primary">Balneários para Homens e Mulheres.
+										<small><strong><em><br> Incluido no valor do aluguer
+												</em></strong></small></label>
+								</div>
+							</div>
+							<br>
+
+							<div class="ml-n4 border-bottom-secondary mt-n4 align-items-center"></div>
+
+							<div class="no-gutters align-items-center my-3 ml-n4">
+								<div class="row mt-5">
+									<i class="fas fa-euro-sign text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Pagamento:</label><br>
+								</div>
+								<div class="row ml-5" id="infoPayment">
+									<label class="font-weight-bold text-primary"> PayPal, Multibanco e MBway</label>
+								</div>
+							</div>
+							<br>
+
+							<div class="ml-n4 border-bottom-secondary mt-n4 align-items-center"></div>
+
+							<div class="no-gutters align-items-center my-3 ml-n4 mb-5 pb-4">
+								<div class="row mt-5">
+									<i class="far fa-clock text-primary mt-2"></i>
+									<label class="font-weight-bold text-secondary text-lg ml-3">Horàrio:</label><br>
+								</div>
+								<div class="row ml-5 tb-perfil" id="fieldTimes">
+									<div class="col-auto">
+										<label class="font-weight-bold text-primary ml-n3"> Segunda:</label>
+										<label class="font-weight-bold text-primary float-right mr-5"> 6:00h às 20:00h </label>
+									</div>
+									<div class="col-auto">
+										<label class="font-weight-bold text-primary ml-n3"> Terça:</label>
+										<label class="font-weight-bold text-primary float-right mr-5"> 6:00h às 20:00h </label>
+									</div>
+									<div class="col-auto">
+										<label class="font-weight-bold text-primary ml-n3"> Quarta:</label>
+										<label class="font-weight-bold text-primary float-right mr-5"> 6:00h às 20:00h </label>
+									</div>
+									<div class="col-auto">
+										<label class="font-weight-bold text-primary ml-n3"> Quinta:</label>
+										<label class="font-weight-bold text-primary float-right mr-5"> 6:00h às 20:00h </label>
+									</div>
+									<div class="col-auto">
+										<label class="font-weight-bold text-primary ml-n3"> Sexta:</label>
+										<label class="font-weight-bold text-primary float-right mr-5"> 6:00h às 20:00h </label>
+									</div>
+									<div class="col-auto">
+										<label class="font-weight-bold text-primary ml-n3"> Sábado:</label>
+										<label class="font-weight-bold text-primary float-right mr-5"> 9:00h às 18:00h</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+
+
+
+						<div class="fixed-bottom2 btn bg-primary border-secondary btn-icon-split btn-lg mr-4 mb-2 mt-3">
+							<span class="icon text-white bg-primary menu-icon" data-toggle="modal"
+								data-target="#logoutModal">
+								<i class="far fa-calendar-alt px-1 pt-2"></i>
+							</span>
+						</div>
+
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+				<!-- End of Main Content -->
+
+				<!-- Footer -->
+				<footer class="sticky-footer bg-primary">
+					<div class="my-n3 px-2">
+						<div class="row">
+
+							<div class="col my-auto mr-n4">
+								<button onclick="location.href='pesquisa-campos.html'" class="search button-footer"><i
+										class="fas fa-search ajustar"></i>
+							</div>
+
+							<div class="col my-auto">
+								<button onclick="location.href='Reservas.html'" class="fav button-footer"><i
+										class="fas fa-calendar-check ajustar"></i>
+							</div>
+
+							<div class="col">
+								<button onclick="location.href='pagina-inicial.html'"
+									class="button-footer2 house text-white"><i class="fas fa-home fa-2x"></i>
+							</div>
+
+							<div class="col my-auto">
+								<button onclick="location.href='Regras.html'" class="chat button-footer"><i class="fas fa-question ajustar"></i>
+							</div>
+
+							<div class="col my-auto ml-n4">
+								<button onclick="location.href='perfil.html'" class="fav button-footer"><i
+										class="fas fa-user ajustar"></i>
+							</div>
+						</div>
+
+					</div>
+				</footer>
+				<!-- End of Footer -->
+
+
+
+
+			</div>
+			<!-- End of Content Wrapper -->
+
+		</div>
+		<!-- End of Page Wrapper -->
+
+		<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded" href="#page-top">
+			<i class="fas fa-angle-up"></i>
+		</a>
+
+		<div class="modal fade" id="deleteALModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document" style="margin-top: 250px;">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title text-primary" id="exampleModalLabel">Confirmação</h5>
+			  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+			  </button>
+			</div>
+			<div class="modal-body text-black">
+			  Deseja mesmo apagar todas as suas notificações?
+	
+			</div>
+			<div class="modal-footer">
+			  
+				<button class="btn btn-secondary mr-3" type="button" data-dismiss="modal">Cancelar</button>
+				<button class="btn btn-primary mr-3" type="submit" id="deleteAll">Confirmar</button>
+			  
+			</div>
+		  </div>
+		</div>
+	  </div>
+		<!--Continuação -->
+		<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog text-black align-items-center" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body mb-0">
+						<div class="menu-content mt-0">
+							<label class="text-primary">Data</label>
+							<br>
+							<form>
+								<input type="date" id="calendario" class="select-css text-center" value="2020-01-14" min="2020-01-14">
+							</form>
+							<br>
+							<label class="text-primary">Horas</label>
+							<br>
+							<form>
+								<select class="select-css text-center padding420 " id="horas" required>
+							<!--	<option value="00:00">00:00</option>
+									<option value="01:00">01:00</option>
+									<option value="02:00">02:00</option>
+									<option value="03:00">03:00</option>
+									<option value="04:00">04:00</option>
+									<option value="05:00">05:00</option>
+									<option value="06:00">06:00</option>
+									<option value="07:00">07:00</option>
+									<option value="08:00">08:00</option>
+									<option value="09:00">09:00</option>
+									<option value="10:00">10:00</option>
+									<option value="11:00">11:00</option>
+									<option value="12:00">12:00</option>
+									<option value="13:00">13:00</option>
+									<option value="14:00">14:00</option>
+									<option value="15:00">15:00</option>
+									<option value="16:00">16:00</option>
+									<option value="17:00">17:00</option>
+									<option value="18:00">18:00</option>
+									<option value="19:00">19:00</option>
+									<option value="20:00">20:00</option>
+									<option value="21:00">21:00</option>
+									<option value="22:00">22:00</option>
+									<option value="23:00">23:00</option>-->
+								</select>
+							</form>
+						</div>
+						<br>
+						<form action="">
+							<h4 class="text-primary mb-4">Tipo de aluguer </h4>
+							  
+							  <input type="radio" name="type" value="Reserve" checked="true"> Reserva<br>
+							  <input type="radio" name="type" value="Event" > Evento<br>
+							   
+							</form>
+							
+						<div class="mb-3 px-5 " id="clicado">
+							<button id="clicado1"  class="btn btn-secondary btn-icon-split btn-lg margem-esquerda2 bg-primary tamanho420" data-toggle="modal" data-target="#logoutModal3" data-dismiss="modal">
+								<span class="icon text-white bg-primary">
+									<i class="far fa-calendar-check"></i>
+								</span>
+							</button>
+							<!--<button class="btn btn-secondary btn-icon-split btn-lg offset-2 bg-primary tamanho420"
+								data-toggle="modal" data-target="#logoutModal2" data-dismiss="modal">
+								<span class="icon text-white bg-primary pl-3">
+									<i class="fas fa-user-plus"></i>-->
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!--Continuação1 -->
+		<div class="modal fade" id="logoutModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close ml-n2" type="button" data-toggle="modal" data-dismiss="modal" data-target="#logoutModal" aria-label="Close">
+							<i class="fas fa-arrow-left fa-xs text-secondary"></i>
+						</button>
+						<div class="searchbar2 ml-5 mt-1 mb-n3">
+							<i class="fas fa-search fa-lg text-primary icon-pesquisa"></i>
+							<input class="texto-pesquisa myFilter" type="text" placeholder="Pesquise">
+						</div>
+					</div>
+					<div class="modal-body">
+
+						<!--Fim da barra de pesquisa-->
+						<div class="menu-content mt-n3">
+
+							<div class="pre-scrollable420" id="show_friends">
+								<!-- Amigo1s -->
+								<ul class="px-0 w-100">
+
+									<!-- Amigo1 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card shadow">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-5">
+														<div class="col-2">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-2 pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+															<div class="level-fields">22</div>
+														</div>
+															<h5 class="text-secondary font-weight-bold col-8 pt-3">Valeria Costa</h5>
+															
+													</div>
+													<label class="text-black mt-1">Valeria.lua@hotmail.com</label>
+												</div>
+											</div>
+										</a>
+									</li>
+
+									<!-- Amigo2 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card shadow">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+															<div class="level-fields">22</div>
+														</div>
+														<div class="col-auto pt-2 px-1">
+															<h5 class="text-secondary font-weight-bold">Carla Oliveira
+															</h5>
+															<label class="text-black">teste.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+
+									<!-- Amigo3 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card shadow">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-1">
+															<h5 class="text-secondary font-weight-bold">Maria Cristina
+															</h5>
+															<label class="text-black">massa.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+
+									<!-- Amigo4 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card shadow">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-1">
+															<h5 class="text-secondary font-weight-bold">Pedro Costa</h5>
+															<label class="text-black">terra.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+
+									<!-- Amigo5 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card shadow">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-1">
+															<h5 class="text-secondary font-weight-bold">Manuel Henriques
+															</h5>
+															<label class="text-black">verde.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+
+									<!-- Amigo6 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card shadow">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-1">
+															<h5 class="text-secondary font-weight-bold">Joao Teixeira
+															</h5>
+															<label class="text-black">rosa.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+									<!-- Amigo7 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card shadow">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-1">
+															<h5 class="text-secondary font-weight-bold">Rui Pedro</h5>
+															<label class="text-black">preto.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+									<!-- Amigo8 -->
+									<li class="myfilter text-white ">
+										<a class="px-0 py-0">
+											<div class="card shadow">
+												<div class="card-body px-1 pb-0">
+													<div class="row ml-2">
+														<div class="col-auto">
+															<img class="rounded-circle img-profile2"
+																src="img/perfil/perfil.jpeg">
+														</div>
+														<div class="col-auto pt-2">
+															<img class="img-profile2" src="img/nivel.png">
+														</div>
+														<div class="col-auto pt-2 px-1">
+															<h5 class="text-secondary font-weight-bold">Jose Pereira
+															</h5>
+															<label class="text-black">mario.lua@hotmail.com</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Continuação3 -->
+		<div class="modal fade" id="logoutModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+					<button class="close ml-n2" type="button" data-toggle="modal" data-dismiss="modal" data-target="#logoutModal" aria-label="Close">
+						<i class="fas fa-arrow-left fa-xs text-secondary"></i>
+					</button>
+					<h5 class="text-secondary marginRight"> Pagamento </h5>
+					</div>
+					<div class="modal-body pre-scrollable ml-4">
+						<a href="#" id="multi" class="button123"><i class="padd2 fas fa-money-bill-alt"></i>Multibanco</a>
+						<a href="#" id="payP" class="button123"><i class="padd fab fa-paypal"></i></i></i>PayPal</a>
+						<a href="#" id="MBW" class="button123"><i class="padd2 fas fa-coins"></i>MBway</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+
+
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="js/sb-admin-2.min.js"></script>
+
+	<script type="text/javascript" src="./controller/campo.js"></script>
+	<script type="text/javascript" src="./controller/variables.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
+	<script>
+    if('serviceWorker' in navigator){
+      try {
+        navigator.serviceWorker.register('sw.js');
+        console.log('SW registered');
+      } catch(error) {
+        console.log('SW register failed');
+      }
+    }
+  </script>
+</body>
+
+</html>
