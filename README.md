@@ -1,7 +1,7 @@
 <br>
 <p align="center">
-<a href="https://www.uminho.pt" target="_blank"><img src="https://i.imgur.com/FXQo8OL.png" alt="University Of Minho"></a>
-<a href="https://www.eng.uminho.pt" target="_blank"><img src="https://i.imgur.com/WABo4st.png" alt="Engineering School"></a>
+<a href="https://www.eng.uminho.pt" target="_blank"><img src="https://i.imgur.com/FXQo8OL.png" alt="Engineering School"></a>
+<a href="https://www.uminho.pt" target="_blank"><img src="https://i.imgur.com/WABo4st.png" alt="University Of Minho"></a>
 <br><a href="http://www.dsi.uminho.pt" target="_blank"><strong>Information Systems Department</strong></a>
 
 <h2 align="center">Web Programming - MIEGSI 2019/2020</h2>
