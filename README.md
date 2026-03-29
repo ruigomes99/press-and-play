@@ -115,7 +115,7 @@ We have deployed a demo version so anyone can test the application without needi
  - [Carlos Gonçalves](https://github.com/Carlosgoncalves00) (Front-End Dev)
  - [João Teixeira](https://github.com/JoaoTeixeira89218) (Front-End Dev)
  - [Manuel Ribeiro](https://github.com/ManuelRibeiro89247) (Front-End Dev)
- - [Joáo Guedes](https://github.com/JoaoGuedes01) (Back-End Dev)
+ - [João Guedes](https://github.com/JoaoGuedes01) (Back-End Dev)
  - [João Pedro Gonçalves](https://github.com/joaopedrofg7) (Back-End Dev)
  - [Rui Gomes](https://github.com/ruigomes99) (Back-End Dev)
 
